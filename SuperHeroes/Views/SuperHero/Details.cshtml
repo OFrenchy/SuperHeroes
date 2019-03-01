@@ -1,0 +1,74 @@
+﻿@model SuperHeroes.Models.SuperHero
+
+@{
+    ViewBag.Title = "Read";
+}
+
+<h2>Read</h2>
+
+<div>
+    <h4>SuperHero</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AlterEgo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AlterEgo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimaryAbility)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrimaryAbility)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondaryAbility)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecondaryAbility)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CatchPhrase)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CatchPhrase)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Favorite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Favorite)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageFile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageFile)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
