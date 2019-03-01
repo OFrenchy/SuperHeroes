@@ -29,5 +29,6 @@ namespace SuperHeroes.Models
         {
             return new ApplicationDbContext();
         }
+        public DbSet<Hero> Heroes { get; set; }
     }
 }
