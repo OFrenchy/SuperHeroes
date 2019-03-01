@@ -13,5 +13,7 @@ namespace SuperHeroes.Models
         string primaryAbility;
         string secondaryAbility;
         string catchPhrase;
+        bool favorite;
+        string imageFile;
     }
 }
