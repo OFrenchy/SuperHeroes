@@ -25,7 +25,7 @@ namespace SuperHeroes.Controllers
         // GET: SuperHero/Details/5
         public ActionResult Details(int id)
         {
-            return View(db.SuperHeroes.Find(id));// .Select(s => s.ID == id).First());
+            return View(db.SuperHeroes.Find(id));
         }
 
         // GET: SuperHero/Create
@@ -40,7 +40,6 @@ namespace SuperHeroes.Controllers
         {
             try
             {
-                // TODO: Add insert logic here
                 db.SuperHeroes.Add(superHero);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -54,17 +53,16 @@ namespace SuperHeroes.Controllers
         // GET: SuperHero/Edit/5
         public ActionResult Edit(int id)
         {
-            //db.SuperHeroes.Select(s => s.ID == id).First();
-            return View(db.SuperHeroes.Find(id));//.Select(s => s.ID == id).First());
+            return View(db.SuperHeroes.Find(id));
         }
 
         // POST: SuperHero/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, SuperHero superHero)//, FormCollection collection)
+        public ActionResult Edit(int id, SuperHero superHero)
         {
             try
             {
-                SuperHero thisSuperHero = db.SuperHeroes.Find(id);// .Where(s => s.ID == id).First();
+                SuperHero thisSuperHero = db.SuperHeroes.Find(id);
 
                 // why doesn't this work???
                 //foreach (var field in thisSuperHero.GetType().GetFields())
