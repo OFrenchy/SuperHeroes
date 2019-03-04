@@ -17,13 +17,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @*SuperHero was Home in the 4 lines below*@
+                @Html.ActionLink("Superheroes!", "Index", "SuperHero", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Home", "Index", "SuperHero")</li>
+                    @*<li>@Html.ActionLink("About", "About", "SuperHero")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "SuperHero")</li>*@
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -39,7 +40,6 @@
     <div class="container body-content">
         <div class="col-md-5">
             <img src="~/Content/img/Terminator.jpeg" height="160">
-            @*<img src="@Url.Content('Terminator.jpeg')" height="160">*@
         </div>
     </div>
 
