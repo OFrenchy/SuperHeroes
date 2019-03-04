@@ -1,8 +1,8 @@
 ﻿@model IEnumerable<SuperHeroes.Models.SuperHero>
 
 @{
-    //ViewBag.Title = "SuperHeroes List";
-    ViewBag.Title = "Index";
+    ViewBag.Title = "SuperHeroes List";
+    //ViewBag.Title = "Index";
 }
 
 <h2>List</h2>
@@ -33,6 +33,7 @@
         <th>
             @Html.DisplayNameFor(model => model.ImageFile)
         </th>
+        
         <th></th>
     </tr>
 
@@ -60,6 +61,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.ImageFile)
             </td>
+
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
                 @Html.ActionLink("Details", "Details", new { id = item.ID }) |
